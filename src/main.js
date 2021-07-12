@@ -6,3 +6,6 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
 }).$mount('#app')
+
+// vueファイルはインポートして使用する
+// 最終的にコンポーネントのオブジェクトになる
