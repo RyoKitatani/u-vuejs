@@ -22,3 +22,10 @@ export default {
 // JSの使用から文字識別ができる仕組みになっているから識別可能
 
 // キャメルケース 最初の文字が小文字
+
+<style scoped>
+div {
+  border: 1px solid blue;
+}
+
+</style>
