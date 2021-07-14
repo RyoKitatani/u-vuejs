@@ -12,6 +12,7 @@
        <p>{{ number }}</p>
     </template>
   </LikeHeader>
+
   <LikeNumber :total-number="number" @my-click="incrementNumber"></LikeNumber>
   <LikeNumber :total-number="number"></LikeNumber>
   <!-- ケバブケース推奨 属性のため -->
@@ -63,3 +64,4 @@ h1 {
 
 //v-slot:好きな名前 名前付きスロット
 // テンプレートで囲み、name属性で指定する
+
