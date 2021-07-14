@@ -2,8 +2,9 @@
   <div>
   <like-header></like-header>
   <p>{{number}}</p>
-  <LikeNumber v-bind:number="number"></LikeNumber>
-  <LikeNumber :number="number"></LikeNumber>
+  <LikeNumber :totalNumber="number"></LikeNumber>
+  <LikeNumber :total-number="number"></LikeNumber>
+  <!-- ケバブケース推奨 属性のため -->
   </div>
 </template>
 
@@ -36,4 +37,4 @@ div {
 
 </style>
 
-// props
+// props 親から子に渡す
