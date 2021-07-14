@@ -1,7 +1,10 @@
 <template>
   <div>
-  <like-header></like-header>
-  <p>{{number}}</p>
+  <LikeHeader>
+    <h1>トータルのいいね数</h1>
+    <h2>{{ number}}</h2>
+  </LikeHeader>
+  <h2>{{number}}</h2>
   <LikeNumber :total-number="number" @my-click="incrementNumber"></LikeNumber>
   <LikeNumber :total-number="number"></LikeNumber>
   <!-- ケバブケース推奨 属性のため -->
