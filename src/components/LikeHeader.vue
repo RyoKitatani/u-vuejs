@@ -1,7 +1,11 @@
 <template>
 <div>
-  <slot></slot>
-  <p>{{headerText}}</p>
+  <slot name="title"></slot>
+  <hr>
+  <p>いいねの数</p>
+  <slot name="number"></slot>
+
+  <!-- <p>{{headerText}}</p> -->
 </div>
   <!-- スロット HTMLテキストを全て送れる -->
 </template>

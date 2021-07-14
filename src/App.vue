@@ -1,8 +1,16 @@
 <template>
   <div>
-  <LikeHeader header-text="Hello">
+  <!-- <LikeHeader header-text="Hello">
     <h1>トータルのいいね数</h1>
     <h2>{{ number}}</h2>
+  </LikeHeader> -->
+  <LikeHeader>
+    <template v-slot:title>
+    <h2>こんにちは</h2>
+    </template>
+    <template v-slot:number>
+       <p>{{ number }}</p>
+    </template>
   </LikeHeader>
   <LikeNumber :total-number="number" @my-click="incrementNumber"></LikeNumber>
   <LikeNumber :total-number="number"></LikeNumber>
@@ -49,3 +57,9 @@ h1 {
 
 // props 親から子に渡す
 // $emit() カスタムイベントを作ることができる。
+
+//オールバックコンテンツ 中身がない時のデフォルト
+//slotタグないに書いておくと、値がない場合のみ表示される。
+
+//v-slot:好きな名前 名前付きスロット
+// テンプレートで囲み、name属性で指定する
