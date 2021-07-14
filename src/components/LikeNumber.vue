@@ -7,19 +7,7 @@
 
 <script>
 export default {
-  props: ["totalNumber", "testProps"],
-  // props: { 
-  //     totalNumber: {
-  //       type: Number,
-  //       // required: true,
-  //       default: 10
-  //     },
-  //     testProps: {
-  //       type: String
-  //     }
-  //     // 型指定
-  //     // バリデーション
-  // },
+  props: ["totalNumber"],
   computed: {
     halfNumber() {
       return this.totalNumber / 2
@@ -27,7 +15,7 @@ export default {
   },
   methods: {
     increment() {
-      this.number += 1;
+      this.$emit("my-click", this.totalNumber + 1);
     }
   }
 };

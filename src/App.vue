@@ -2,8 +2,8 @@
   <div>
   <like-header></like-header>
   <p>{{number}}</p>
-  <LikeNumber :total-number="number" test-props="test"></LikeNumber>
-  <LikeNumber :total-number="number" test-props="test"></LikeNumber>
+  <LikeNumber :total-number="number" @my-click="incrementNumber"></LikeNumber>
+  <LikeNumber :total-number="number"></LikeNumber>
   <!-- ケバブケース推奨 属性のため -->
   </div>
 </template>
@@ -20,7 +20,12 @@ export default {
  components: {
    LikeHeader
    //パスカルケース 大文字で区切る
- } 
+ } ,
+ methods: {
+   incrementNumber(value) {
+     this.number =  value
+   }
+ }
 }
 </script>
 
@@ -38,3 +43,4 @@ div {
 </style>
 
 // props 親から子に渡す
+// $emit() カスタムイベントを作ることができる。
