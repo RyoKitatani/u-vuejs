@@ -7,7 +7,16 @@
 
 <script>
 export default {
-  props: ["totalNumber"],
+  // props: ["totalNumber"],
+  props: { 
+      totalNumber: {
+        type: Number,
+        // required: true,
+        default: 10
+      }
+      // 型指定
+      // バリデーション
+  },
   computed: {
     halfNumber() {
       return this.totalNumber / 2

@@ -2,7 +2,7 @@
   <div>
   <like-header></like-header>
   <p>{{number}}</p>
-  <LikeNumber :totalNumber="number"></LikeNumber>
+  <LikeNumber></LikeNumber>
   <LikeNumber :total-number="number"></LikeNumber>
   <!-- ケバブケース推奨 属性のため -->
   </div>
