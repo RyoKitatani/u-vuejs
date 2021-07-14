@@ -1,8 +1,9 @@
 <template>
   <div>
   <like-header></like-header>
-  <!-- ケバブケース -->
-  <LikeNumber></LikeNumber>
+  <p>{{number}}</p>
+  <LikeNumber v-bind:number="number"></LikeNumber>
+  <LikeNumber :number="number"></LikeNumber>
   </div>
 </template>
 
@@ -10,8 +11,13 @@
 import LikeHeader from "./components/LikeHeader.vue"
 
 export default {
+  data() {
+    return {
+      number: 14
+    };
+  },
  components: {
-   LikeHeader: LikeHeader
+   LikeHeader
    //パスカルケース 大文字で区切る
  } 
 }
@@ -29,3 +35,5 @@ div {
 }
 
 </style>
+
+// props

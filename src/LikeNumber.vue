@@ -1,13 +1,17 @@
 <template>
 <div>
-  <p>いいね({{ number / 2 }})</p>
+  <p>いいね({{ number }})</p>
   <button @click="increment">+1</button>
 </div>
 </template>
 
 <script>
 export default {
-  props: ["number"],
+  data: function() {
+    return {
+      number: 5
+    }
+  },
   methods: {
     increment() {
       this.number += 1;
@@ -15,10 +19,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-div {
-  border: 1px solid red;
-}
-
-</style>
