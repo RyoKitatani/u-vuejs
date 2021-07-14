@@ -1,5 +1,8 @@
 <template>
-  <h1>{{headerText}}</h1>
+<div>
+  <slot></slot>
+</div>
+  <!-- スロット HTMLテキストを全て送れる -->
 </template>
 
 <script>
