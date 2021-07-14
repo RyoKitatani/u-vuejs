@@ -1,7 +1,7 @@
 <template>
 <div>
-  <slot></slot>
-  <p>{{headerText}}</p>
+  <slot>デフォルトのタイトル</slot>
+  <!-- <p>{{headerText}}</p> -->
 </div>
   <!-- スロット HTMLテキストを全て送れる -->
 </template>

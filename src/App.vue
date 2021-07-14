@@ -1,9 +1,10 @@
 <template>
   <div>
-  <LikeHeader header-text="Hello">
+  <!-- <LikeHeader header-text="Hello">
     <h1>トータルのいいね数</h1>
     <h2>{{ number}}</h2>
-  </LikeHeader>
+  </LikeHeader> -->
+  <LikeHeader></LikeHeader>
   <LikeNumber :total-number="number" @my-click="incrementNumber"></LikeNumber>
   <LikeNumber :total-number="number"></LikeNumber>
   <!-- ケバブケース推奨 属性のため -->
@@ -49,3 +50,6 @@ h1 {
 
 // props 親から子に渡す
 // $emit() カスタムイベントを作ることができる。
+
+//オールバックコンテンツ 中身がない時のデフォルト
+//slotタグないに書いておくと、値がない場合のみ表示される。
