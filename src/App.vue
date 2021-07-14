@@ -1,6 +1,6 @@
 <template>
   <div>
-  <LikeHeader>
+  <LikeHeader header-text="Hello">
     <h1>トータルのいいね数</h1>
     <h2>{{ number}}</h2>
   </LikeHeader>
@@ -40,6 +40,9 @@ export default {
 <style scoped>
 div {
   border: 1px solid blue;
+}
+h1 {
+  color: blue;
 }
 
 </style>
