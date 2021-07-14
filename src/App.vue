@@ -2,8 +2,8 @@
   <div>
   <like-header></like-header>
   <p>{{number}}</p>
-  <LikeNumber></LikeNumber>
-  <LikeNumber :total-number="number"></LikeNumber>
+  <LikeNumber :total-number="number" test-props="test"></LikeNumber>
+  <LikeNumber :total-number="number" test-props="test"></LikeNumber>
   <!-- ケバブケース推奨 属性のため -->
   </div>
 </template>
