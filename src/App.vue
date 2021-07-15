@@ -5,8 +5,13 @@
     <h2>{{ number}}</h2>
   </LikeHeader> -->
   <LikeHeader>
+    <h2>みなさん</h2>
     <template v-slot:title>
     <h2>こんにちは</h2>
+    </template>
+    <template v-clot:default>
+      <h3>はじめまして</h3>
+      <p>よろしくお願いいたします</p>
     </template>
     <template v-slot:number>
        <p>{{ number }}</p>
@@ -65,3 +70,4 @@ h1 {
 //v-slot:好きな名前 名前付きスロット
 // テンプレートで囲み、name属性で指定する
 
+//デフォルトスロット
