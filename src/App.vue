@@ -6,6 +6,7 @@
   </LikeHeader> -->
   <LikeHeader>
     <h2>みなさん</h2>
+    <!-- <div v-slot:title> -->
     <template v-slot:title>
     <h2>こんにちは</h2>
     </template>
