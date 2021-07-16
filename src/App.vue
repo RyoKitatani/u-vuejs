@@ -4,13 +4,13 @@
     <h1>トータルのいいね数</h1>
     <h2>{{ number}}</h2>
   </LikeHeader> -->
-  <LikeHeader>
+    <LikeHeader #default="slotProps">
     <!-- <template v-slot:default="slotProps"> -->
       <p>{{ slotProps }}</p>
       <h2>みなさん</h2>
       <h3>はじめまして</h3>
       <p>よろしくお願いいたします</p>
-    <template v-slot:[title]></template>
+    <!-- <template #title></template> -->
   </LikeHeader>
 
   <LikeNumber :total-number="number" @my-click="incrementNumber"></LikeNumber>
@@ -67,3 +67,4 @@ h1 {
 // テンプレートで囲み、name属性で指定する
 
 //デフォルトスロット
+//v-slot #に置き換えることができる
