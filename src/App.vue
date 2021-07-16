@@ -7,8 +7,9 @@
   <LikeHeader>
     <h2>みなさん</h2>
     <!-- <div v-slot:title> -->
-    <template v-slot:title>
-    <h2>こんにちは</h2>
+    <template v-slot:title="slotProps">
+      <h2>こんにちは</h2>
+      <h2>{{ slotProps }}</h2>
     </template>
     <template v-clot:default>
       <h3>はじめまして</h3>
