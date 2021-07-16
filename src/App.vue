@@ -4,7 +4,7 @@
     <h1>トータルのいいね数</h1>
     <h2>{{ number}}</h2>
   </LikeHeader> -->
-  <LikeHeader v-slot="slotProps">
+  <LikeHeader>
     <!-- <template v-slot:default="slotProps"> -->
       <p>{{ slotProps }}</p>
       <h2>みなさん</h2>
@@ -12,10 +12,10 @@
       <p>よろしくお願いいたします</p>
     <!-- </template> -->
     <!-- <div v-slot:title> -->
-    <!-- <template v-slot:title="slotProps">
+    <template v-slot:title="slotProps">
       <h2>こんにちは</h2>
       <h2>{{ slotProps.user.firstName }}</h2>
-    </template> -->
+    </template>
     <!-- <template v-clot:default> -->
     <!-- </template> -->
     <!-- <template v-slot:number>
