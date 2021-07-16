@@ -1,9 +1,11 @@
 <template>
 <div>
-  <slot name="title" :user="user" text="text"></slot>
-  <slot name="default"></slot>
+  <slot :user="user" text="text"></slot>
+  <!-- <slot name="title" :user="user" text="text"></slot> -->
+  <slot></slot>
   <hr>
   <p>いいねの数</p>
+  <slot></slot>
   <slot name="number"></slot>
   <!-- <p>{{headerText}}</p> -->
 </div>

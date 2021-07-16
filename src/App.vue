@@ -4,20 +4,23 @@
     <h1>トータルのいいね数</h1>
     <h2>{{ number}}</h2>
   </LikeHeader> -->
-  <LikeHeader>
-    <h2>みなさん</h2>
-    <!-- <div v-slot:title> -->
-    <template v-slot:title="slotProps">
-      <h2>こんにちは</h2>
-      <h2>{{ slotProps }}</h2>
-    </template>
-    <template v-clot:default>
+  <LikeHeader v-slot="slotProps">
+    <!-- <template v-slot:default="slotProps"> -->
+      <p>{{ slotProps }}</p>
+      <h2>みなさん</h2>
       <h3>はじめまして</h3>
       <p>よろしくお願いいたします</p>
-    </template>
-    <template v-slot:number>
+    <!-- </template> -->
+    <!-- <div v-slot:title> -->
+    <!-- <template v-slot:title="slotProps">
+      <h2>こんにちは</h2>
+      <h2>{{ slotProps.user.firstName }}</h2>
+    </template> -->
+    <!-- <template v-clot:default> -->
+    <!-- </template> -->
+    <!-- <template v-slot:number>
        <p>{{ number }}</p>
-    </template>
+    </template> -->
   </LikeHeader>
 
   <LikeNumber :total-number="number" @my-click="incrementNumber"></LikeNumber>
