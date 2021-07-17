@@ -1,38 +1,38 @@
 <template>
   <div>
-  <!-- <LikeHeader header-text="Hello">
-    <h1>トータルのいいね数</h1>
-    <h2>{{ number}}</h2>
-  </LikeHeader> -->
-    <LikeHeader #default="slotProps">
-    <!-- <template v-slot:default="slotProps"> -->
-      <p>{{ slotProps }}</p>
-      <h2>みなさん</h2>
+    <LikeHeader>
       <h3>はじめまして</h3>
-      <p>よろしくお願いいたします</p>
-    <!-- <template #title></template> -->
-  </LikeHeader>
+    </LikeHeader>
+    <LikeNumber :total-number="number" @my-click="incrementNumber"></LikeNumber>
 
-  <LikeNumber :total-number="number" @my-click="incrementNumber"></LikeNumber>
-  <LikeNumber :total-number="number"></LikeNumber>
-  <!-- ケバブケース推奨 属性のため -->
+    <button @click="currentComponent ='Home'">Home</button>
+    <button @click="currentComponent ='About'">About</button>
+    <component :is="currentComponent"></component>
+
+    <Home></Home>
+    <About></About>
   </div>
 </template>
 
 <script>
-import LikeHeader from "./components/LikeHeader.vue"
+import LikeHeader from "./components/LikeHeader.vue";
+import About from "./components/About.vue";
+import Home from "./components/Home.vue";
+
 
 export default {
   data() {
     return {
       number: 14,
-      title: "title"
+      currentComponent:'Home'
     };
   },
- components: {
-   LikeHeader
+  components: {
+    LikeHeader,
+    About,
+    Home
    //パスカルケース 大文字で区切る
- } ,
+ },
  methods: {
    incrementNumber(value) {
      this.number =  value
