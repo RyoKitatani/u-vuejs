@@ -9,8 +9,8 @@
     <button @click="currentComponent ='About'">About</button>
     <component :is="currentComponent"></component>
 
-    <Home></Home>
     <About></About>
+    <Home></Home>
   </div>
 </template>
 
