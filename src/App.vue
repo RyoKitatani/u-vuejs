@@ -43,6 +43,12 @@
       <label for="30代">30代</label>
       <p>{{eventDate.target}}</p>
 
+      <p>参加費</p>
+      <input type="radio" id="free" value="無料" v-model="eventDate.price">
+      <label for="free">無料</label>
+      <input type="radio" id="pay" value="有料" v-model="eventDate.price">
+      <label for="pay">有料</label>
+
     </div>
 
     <About></About>
@@ -67,7 +73,8 @@ export default {
         host: "",
         detai: "",
         isPrivate: false,
-        target: []
+        target: [],
+        price: "無料"
       }
     };
   },
