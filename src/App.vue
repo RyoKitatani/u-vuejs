@@ -13,7 +13,8 @@
     <div>
       <h2>イベントのフォーム</h2>
       <label for="title">タイトル</label>
-      <input type="text" id="title" v-model="eventDate.title">
+      <input type="text" id="title" v-model.lazy="eventDate.title">
+      <!-- lazyがあるとフォーカスが外れたら反映される -->
     </div>
     <p>{{eventDate.title}}</p>
     <About></About>
