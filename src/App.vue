@@ -15,8 +15,13 @@
       <label for="title">タイトル</label>
       <input type="text" id="title" v-model.lazy="eventDate.title">
       <!-- lazyがあるとフォーカスが外れたら反映される -->
+
+      <p>{{eventDate.title}}</p>
+
+      <label for="maxNumber">最大人数</label>
+      <input type="number" id="maxNumber" v-model.number="eventDate.maxNumber">
+      <p>{{ typeof eventDate.maxNumber}}</p>
     </div>
-    <p>{{eventDate.title}}</p>
     <About></About>
     <Home></Home>
   </div>
@@ -34,7 +39,8 @@ export default {
       number: 14,
       currentComponent:'Home',
       eventDate: {
-        title: "タイトル"
+        title: "タイトル",
+        maxNumber: 0
       }
     };
   },
