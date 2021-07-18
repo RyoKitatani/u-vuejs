@@ -34,6 +34,15 @@
       <input type="checkbox" id="isPrivate" v-model="eventDate.isPrivate">
       <label for="isPrivate">非公開</label>
       <p>{{eventDate.isPrivate}}</p>
+      <p>参加条件</p>
+      <input type="checkbox" id="10" value="10代" v-model="eventDate.target">
+      <label for="10代">10代</label>
+      <input type="checkbox" id="20" value="20代" v-model="eventDate.target">
+      <label for="20代">20代</label>
+      <input type="checkbox" id="30" value="30代" v-model="eventDate.target">
+      <label for="30代">30代</label>
+      <p>{{eventDate.target}}</p>
+
     </div>
 
     <About></About>
@@ -57,7 +66,8 @@ export default {
         maxNumber: 0,
         host: "",
         detai: "",
-        isPrivate: false
+        isPrivate: false,
+        target: []
       }
     };
   },
