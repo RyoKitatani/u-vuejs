@@ -20,8 +20,15 @@
 
       <label for="maxNumber">最大人数</label>
       <input type="number" id="maxNumber" v-model.number="eventDate.maxNumber">
+      <!-- stringではなく、number型にしてくれる .number -->
       <p>{{ typeof eventDate.maxNumber}}</p>
+
+      <label for="host">主催者</label>
+      <input type="text" id="host" v-model.trim="eventDate.host">
+      <!--  空白を取り除いてくれる .trim -->
+      <pre>{{ eventDate.host}}</pre>
     </div>
+
     <About></About>
     <Home></Home>
   </div>
@@ -40,7 +47,8 @@ export default {
       currentComponent:'Home',
       eventDate: {
         title: "タイトル",
-        maxNumber: 0
+        maxNumber: 0,
+        host: ""
       }
     };
   },
