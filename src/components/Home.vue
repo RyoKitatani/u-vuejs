@@ -1,8 +1,8 @@
 <template>
 <div>
   <p v-border:solid.round.shadow="{width: '3px', color: 'blue'}">{{tmpData}}</p>
-  <h2>{{ title | upperCase }}</h2>
-  <p>{{ subTitle | upperCase }}</p>
+  <h2>{{ title | lowerCase }}</h2>
+  <p>{{ subTitle | lowerCase }}</p>
 </div>
 </template>
 
@@ -13,6 +13,11 @@ export default {
       tmpData: "hello",
       title: "Welocme to Tokyo",
       subTitle: "Tokyo is great city"
+    }
+  },
+  filters: {
+    lowerCase(value) {
+      return value.toLowerCase();
     }
   },
   directives: {
