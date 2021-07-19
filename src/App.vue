@@ -90,7 +90,7 @@ export default {
     Home,
     EventTitle
    //パスカルケース 大文字で区切る
- },
+  },
  methods: {
    incrementNumber(value) {
      this.number =  value
