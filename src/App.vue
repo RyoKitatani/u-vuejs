@@ -2,8 +2,8 @@
   <div class="main">
     <button @click="show = !show">切り替え</button>
     <transition 
-     enter-active-class="animated bounce" 
-     leave-active-class="animated shake"
+     enter-active-class="animate__animated animate__bounce" 
+     leave-active-class="animate__animated animate__shake"
     appear >
       <p v-if="show">hello</p>
     </transition>
