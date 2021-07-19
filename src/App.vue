@@ -12,12 +12,7 @@
     </keep-alive>
     <div style="padding: 10rem">
       <h2>イベントのフォーム</h2>
-      <label for="title">タイトル</label>
-      <input type="text" id="title" v-model="eventDate.title">
-      <!-- <input type="text" id="title" :value="eventDate.title" @input ="eventDate.title = $event.target.value"> -->
-      <!-- lazyがあるとフォーカスが外れたら反映される -->
-
-      <p>{{eventDate.title}}</p>
+      <EventTitle v-model="eventDate.title"></EventTitle>
 
       <label for="maxNumber">最大人数</label>
       <input type="number" id="maxNumber" v-model.number="eventDate.maxNumber">
@@ -68,6 +63,7 @@
 import LikeHeader from "./components/LikeHeader.vue";
 import About from "./components/About.vue";
 import Home from "./components/Home.vue";
+import EventTitle from "./components/EventTitle.vue";
 
 
 export default {
@@ -91,7 +87,8 @@ export default {
   components: {
     LikeHeader,
     About,
-    Home
+    Home,
+    EventTitle
    //パスカルケース 大文字で区切る
  },
  methods: {
