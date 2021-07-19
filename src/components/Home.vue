@@ -11,23 +11,17 @@
 
 <script>
 import CountNumber from "./CountNumber.vue"
+import { tokyoNumber } from "@/tokyoNumber";
 
 export default {
+  mixins: [tokyoNumber],
   data() {
     return {
       tmpData: "hello",
-      title: "Welocme to Tokyo",
-      subTitle: "Tokyo is great city",
-      number:  0
     }
   },
   components: {
     CountNumber
-  },
-  filters: {
-    lowerCase(value) {
-      return value.toLowerCase();
-    }
   },
   directives: {
     border(el, binding) {
