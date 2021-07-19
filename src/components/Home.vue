@@ -1,12 +1,18 @@
 <template>
+<div>
   <p v-border:solid.round.shadow="{width: '3px', color: 'blue'}">{{tmpData}}</p>
+  <h2>{{ title | upperCase }}</h2>
+  <p>{{ subTitle | upperCase }}</p>
+</div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      tmpData: "hello"
+      tmpData: "hello",
+      title: "Welocme to Tokyo",
+      subTitle: "Tokyo is great city"
     }
   },
   directives: {
