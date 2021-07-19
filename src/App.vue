@@ -4,7 +4,7 @@
     <transition name="fade">
       <p v-if="show">hello</p>
     </transition>
-    <transition name="slide" type="animation">
+    <transition name="slide" type="animation" appear>
      <p v-if="show">bye</p>
 
     </transition>
