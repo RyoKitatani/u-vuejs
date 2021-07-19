@@ -3,6 +3,8 @@
   <p v-border:solid.round.shadow="{width: '3px', color: 'blue'}">{{tmpData}}</p>
   <h2>{{ title | lowerCase | upperCase}}</h2>
   <p>{{ subTitle | upperCase | lowerCase }}</p>
+  <p>{{ number}}</p>
+  <button @click="number++">+1</button>
 </div>
 </template>
 
@@ -12,7 +14,8 @@ export default {
     return {
       tmpData: "hello",
       title: "Welocme to Tokyo",
-      subTitle: "Tokyo is great city"
+      subTitle: "Tokyo is great city",
+      number:  0
     }
   },
   filters: {
