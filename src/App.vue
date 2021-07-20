@@ -5,6 +5,19 @@
     <p>{{ myAnimation }}</p>
     <button @click="show = !show">切り替え</button>
     <br><br>
+    <button @click="add">追加</button>
+    <ul style="width: 200px; margin: atuo">
+      <transition-group>
+        <li 
+        style="cursor: pointer;"
+        v-for="(number, index) in numbers"
+        :key="number.id"
+        @click="remove(index)"
+        >
+        {{number}}
+        </li>
+      </transition-group>
+    </ul>
     <transition
       :css="false"
       @before-enter="beforeEnter"
@@ -51,12 +64,24 @@ export default {
   },
   data() {
     return {
+      numbers: [0,1,2],
+      nextNumber: 3,
       show: true,
       myAnimation: "slide",
-      myComponent: "ComponentA"
+      myComponent: "ComponentA",
     }
   },
   methods: {
+    randamIndex() {
+      return Math.floor(Math.random() * this.numbers.length)
+    },
+    add() {
+      this.numbers.splice(this.randamIndex(),0, this.nextNumber);
+      this.nextNumber += 1;
+    },
+    remove(index) {
+      this.numbers.splice(index, 1);
+    },
     beforeEnter(el) {
       el.style.transform = `scale(0)`
     },
