@@ -62,21 +62,29 @@ export default {
     }
   },
   methods: {
-    beforeEnter() {
+    beforeEnter(el) {
+
     },
-    enter() {
+    enter(el, done) {
+
     },
-    afterEnter() {
+    afterEnter(el) {
+
     },
-    enterCancelled() {
+    enterCancelled(el) {
+
     },
-    beforeLeave() {
+    beforeLeave(el, done) {
+
     },
-    leave() {
+    leave(el) {
+
     },
-    afterELeave() {
+    afterELeave(el) {
+
     },
-    leaveCancelled() {
+    leaveCancelled(el) {
+
     }
   }
 }
