@@ -7,11 +7,11 @@
     <br><br>
     <button @click="add">追加</button>
     <ul style="width: 200px; margin: atuo">
-      <transition-group>
+      <transition-group name="fade">
         <li 
         style="cursor: pointer;"
         v-for="(number, index) in numbers"
-        :key="number.id"
+        :key="number"
         @click="remove(index)"
         >
         {{number}}
