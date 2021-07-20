@@ -8,7 +8,7 @@
     <button @click="add">追加</button>
     <ul style="width: 200px; margin: atuo">
       <transition-group name="fade">
-        <li 
+        <li
         style="cursor: pointer;"
         v-for="(number, index) in numbers"
         :key="number"
@@ -120,11 +120,15 @@ export default {
   border-radius: 100px;
 }
 
+.fade-move {
+  transition: transform 1s;
+}
+
 .fade-enter {
   opacity: 0;
 }
 .fade-enter-active {
-  transition: opacity 0.5s;
+  transition: opacity 1s;
 }
 .fade-enter-to {
   opacity: 1;
@@ -133,7 +137,9 @@ export default {
   opacity: 1;
 }
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 1s;
+  position: absolute;
+  width: 200px;
 }
 .fade-leave-to {
   opacity: 0;
