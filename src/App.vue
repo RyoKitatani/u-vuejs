@@ -1,8 +1,8 @@
 <template>
   <div style="width: 400px; margin: auto; padding-top: 50px">
     <nav>
-      <router-link to="/" class="link">Home</router-link>
-      <router-link to="/users" class="link">Users</router-link>
+      <router-link to="/" active-class="link-active" exact class="link">Home</router-link>
+      <router-link to="/users" active-class="link-active" exact class="link">Users</router-link>
     </nav>
     <router-view></router-view>
   </div>
@@ -122,6 +122,10 @@
 
 .link {
   margin-right: 10px;
+}
+
+.link-active {
+  font-size: 20px;
 }
 
 /* .circle{
