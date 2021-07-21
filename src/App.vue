@@ -1,5 +1,8 @@
 <template>
-  <div class="main">
+  <div>
+    <router-view></router-view>
+  </div>
+  <!-- <div class="main">
     <button @click="myAnimation = 'slide'">Slide</button>
     <button @click="myAnimation = 'fade'">Fade</button>
     <p>{{ myAnimation }}</p>
@@ -50,77 +53,77 @@
      <p v-if="show">bye</p>
 
     </transition>
-  </div>
+  </div> -->
 </template>
 
 <script>
-import ComponentA from "./components/ComponentA.vue";
-import ComponentB from "./components/ComponentB.vue";
+// import ComponentA from "./components/ComponentA.vue";
+// import ComponentB from "./components/ComponentB.vue";
 
-export default {
-  components: {
-    ComponentA,
-    ComponentB
-  },
-  data() {
-    return {
-      numbers: [0,1,2],
-      nextNumber: 3,
-      show: true,
-      myAnimation: "slide",
-      myComponent: "ComponentA",
-    }
-  },
-  methods: {
-    randamIndex() {
-      return Math.floor(Math.random() * this.numbers.length)
-    },
-    add() {
-      this.numbers.splice(this.randamIndex(),0, this.nextNumber);
-      this.nextNumber += 1;
-    },
-    remove(index) {
-      this.numbers.splice(index, 1);
-    },
-    beforeEnter(el) {
-      el.style.transform = `scale(0)`
-    },
-    enter(el, done) {
-      let scale = 0;
-      const interval = setInterval(() => {
-        el.style.transform = `scale(${scale})`;
-        scale += 0.1;
-        if (scale > 1) {
-          clearInterval(interval)
-          done()
-        }
-      }, 200);
-    },
-    leave(el, done) {
-      let scale = 1;
-      const interval = setInterval(() => {
-        el.style.transform = `scale(${scale})`;
-        scale -= 0.1;
-        if (scale < 0) {
-          clearInterval(interval)
-          done()
-        }
-      }, 200);
-    },
-  }
-}
+// export default {
+//   components: {
+//     ComponentA,
+//     ComponentB
+//   },
+//   data() {
+//     return {
+//       numbers: [0,1,2],
+//       nextNumber: 3,
+//       show: true,
+//       myAnimation: "slide",
+//       myComponent: "ComponentA",
+//     }
+//   },
+//   methods: {
+//     randamIndex() {
+//       return Math.floor(Math.random() * this.numbers.length)
+//     },
+//     add() {
+//       this.numbers.splice(this.randamIndex(),0, this.nextNumber);
+//       this.nextNumber += 1;
+//     },
+//     remove(index) {
+//       this.numbers.splice(index, 1);
+//     },
+//     beforeEnter(el) {
+//       el.style.transform = `scale(0)`
+//     },
+//     enter(el, done) {
+//       let scale = 0;
+//       const interval = setInterval(() => {
+//         el.style.transform = `scale(${scale})`;
+//         scale += 0.1;
+//         if (scale > 1) {
+//           clearInterval(interval)
+//           done()
+//         }
+//       }, 200);
+//     },
+//     leave(el, done) {
+//       let scale = 1;
+//       const interval = setInterval(() => {
+//         el.style.transform = `scale(${scale})`;
+//         scale -= 0.1;
+//         if (scale < 0) {
+//           clearInterval(interval)
+//           done()
+//         }
+//       }, 200);
+//     },
+//   }
+// }
 </script>
 
 <style scoped>
-.circle{
+/* .circle{
   width: 200px;
   height: 200px;
   margin: auto;
   background-color: deeppink;
   border-radius: 100px;
-}
+} */
 
-.fade-move {
+/* .fade-move {
   transition: transform 1s;
 }
 
@@ -172,5 +175,5 @@ export default {
    margin: auto;
    padding-top: 5rem;
    text-align: center;
-}
+} */
 </style>
