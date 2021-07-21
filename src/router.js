@@ -8,5 +8,8 @@ Vue.use(Router);
 export default new Router({
   mode: "history",
   // デフォルトはhash
-  routes: [{path: '/', component: Home},{path: '/users', component: Users}]
+  routes: [
+    {path: '/', component: Home},
+    {path: '/users/:id', component: Users}
+  ]
 });
