@@ -6,5 +6,7 @@ import Users from './views/Users.vue'
 Vue.use(Router);
 
 export default new Router({
+  mode: "history",
+  // デフォルトはhash
   routes: [{path: '/', component: Home},{path: '/users', component: Users}]
 });
