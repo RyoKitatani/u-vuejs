@@ -1,7 +1,9 @@
 <template>
   <div style="width: 400px; margin: auto; padding-top: 50px">
     <router-view name="header"></router-view>
+    <transition name="fade" mode="out-in" @before-enter="beforeEnter">
       <router-view></router-view>
+    </transition>
   </div>
   <!-- <div class="main">
     <button @click="myAnimation = 'slide'">Slide</button>
@@ -58,6 +60,15 @@
 </template>
 
 <script>
+
+export default {
+  methods: {
+    beforeEnter() {
+      this.$root.$emit('triggerScroll');
+
+    }
+  }
+}
 // import ComponentA from "./components/ComponentA.vue";
 // import ComponentB from "./components/ComponentB.vue";
 
