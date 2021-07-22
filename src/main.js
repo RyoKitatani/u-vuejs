@@ -11,7 +11,9 @@ Vue.filter("upperCase", function(value){
 });
 
 router.beforeEach((to, from, next) => {
-  
+  if (to.path === "/users/1") {
+    next({ path: "/" });
+  }
   next();
 })
 
