@@ -1,7 +1,9 @@
 <template>
   <div style="width: 400px; margin: auto; padding-top: 50px">
     <router-view name="header"></router-view>
-    <router-view></router-view>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
   <!-- <div class="main">
     <button @click="myAnimation = 'slide'">Slide</button>
@@ -116,6 +118,16 @@
 </script>
 
 <style scoped>
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;  
+}
+.fade-enter-active,
+.fade-leave-active {
+ transition: opacity .5s;
+}
+
 /* .circle{
   width: 200px;
   height: 200px;
