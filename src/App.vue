@@ -1,9 +1,7 @@
 <template>
   <div style="width: 400px; margin: auto; padding-top: 50px">
     <router-view name="header"></router-view>
-    <transition name="fade" mode="out-in">
       <router-view></router-view>
-    </transition>
   </div>
   <!-- <div class="main">
     <button @click="myAnimation = 'slide'">Slide</button>
