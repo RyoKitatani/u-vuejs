@@ -10,6 +10,11 @@ Vue.filter("upperCase", function(value){
   return value.toUpperCase();
 });
 
+router.beforeEach((to, from, next) => {
+  
+  next();
+})
+
 new Vue({
   router: router,
   render: h => h(App),
