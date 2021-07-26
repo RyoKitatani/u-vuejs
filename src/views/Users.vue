@@ -28,7 +28,7 @@ export default {
   },
   beforeRouteLeave(to, from, next) {
     console.log('beforeRouteLeave')
-    const isLeave = window.confirm('ページh￥を離れますか？')
+    const isLeave = window.confirm('ページを離れますか？')
     if (isLeave) {
       next();
     } else {
