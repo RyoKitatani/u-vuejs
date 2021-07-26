@@ -4,6 +4,9 @@
     <button @click="toUsers">Usersのページに行く</button>
     <p>{{ doubleCount }}</p>
     <p>{{ tripleCount }}</p>
+    <!-- <input type="text" :value="message" @input="updateMessage"> -->
+    <input type="text" v-model="message">
+    <p>{{ message }}</p>
   </div>
 </template>
 
@@ -13,8 +16,18 @@
 export default {
   computed:{
     ...mapGetters(["doubleCount", "tripleCount"]),
+    // message() {
+    //   return this.$store.getters.message;
+    // }
+    message: {
+      get() {
+        return this.$store.getters.message;
+      },
+      set(value) {
+        this.$store.dispatch("updateMessage", value);
+      }
+    }
   },
-  
   methods: {
     toUsers() {
       this.$router.push({
