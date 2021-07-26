@@ -11,10 +11,10 @@ export default new Vuex.Store({
   state: {
     message: ""
   },
+  getters,
+  mutations,
+  actions,
   modules: {
-    count,
-    getters,
-    mutations,
-    actions
+    count
   }
 })

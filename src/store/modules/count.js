@@ -16,8 +16,19 @@ const mutations = {
   },
 }
 
+const actions = {
+  increment(context, number) {
+    context.commit('increment', number);
+  },
+  decrement(context, number) {
+    context.commit('decrement', number);
+  },
+}
+
 export default {
+  namespaced: true,
   state,
   getters,
-  mutations
+  mutations,
+  actions
 }
