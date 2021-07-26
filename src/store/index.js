@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import count from './modules/count'
+import getters from './getters'
+import mutations from './mutations'
+import actions from './actions'
 
 Vue.use(Vuex);
 
@@ -8,23 +11,10 @@ export default new Vuex.Store({
   state: {
     message: ""
   },
-  getters: {
-    message: state => state.message
-  },
-  mutations: {
-    updateMessage(state, newMessage)  {
-      state.message = newMessage;
-    }
-  },
-  actions: {
-    increment(context, number) {
-      context.commit('increment', number);
-    },
-    decrement(context, number) {
-      context.commit('decrement', number);
-    },
-    updateMessage(context, newMessage) {
-      context.commit('updateMessage', newMessage);
-    }
+  modules: {
+    count,
+    getters,
+    mutations,
+    actions
   }
 })
